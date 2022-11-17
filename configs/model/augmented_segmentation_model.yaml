@@ -1,0 +1,7 @@
+_target_: src.models.siamese_downstream_module.Segmentation_Model
+input_size: [4,128,128]
+embedding_size: 64
+pre_train_augmented: False
+pretrain_path: ""
+unet: False
+base_lr: 0.001

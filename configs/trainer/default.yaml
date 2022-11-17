@@ -1,0 +1,15 @@
+_target_: pytorch_lightning.Trainer
+
+gpus: 1
+
+min_epochs: 1
+max_epochs: 150
+
+# number of validation steps to execute at the beginning of the training
+# num_sanity_val_steps: 0
+
+# ckpt path
+resume_from_checkpoint: null
+#'/home/jupyter/deepslide/logs/experiments/runs/First_MAE_Test/2022-08-02_19-28-40/checkpoints/last.ckpt'
+
+log_every_n_steps: 80

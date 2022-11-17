@@ -1,0 +1,58 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment:example
+
+defaults:
+  - override /datamodule: siamese_datamodule.yaml
+  - override /model: augmented_segmentation_model.yaml
+  - override /callbacks: segmentation_callback.yaml
+  - override /logger: wandb.yaml
+  - override /trainer: default.yaml
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+
+# name of the run determines folder name in logs
+name: "segment_hokk_pretrain_kaik_cnn"
+
+seed: 12345
+
+trainer:
+  min_epochs: 1
+  max_epochs: 1000
+  gradient_clip_val: 0.5
+  log_every_n_steps: 500
+  gpus: 2
+  strategy: 'ddp'
+  #resume_from_checkpoint: '/home/jupyter/deepslide/logs/experiments/runs/MAE_Downstream/2022-09-21_06-04-52/checkpoints/last.ckpt'
+
+model:
+    input_size: [4,128,128]
+    embedding_size: 64
+    pre_train_augmented: True
+    pretrain_path: '/home/jupyter/deepslide/logs/experiments/runs/Siamese_Type1_kaikora/2022-09-27_11-38-01/checkpoints/last.ckpt'
+    unet: False
+    base_lr: 0.001
+    pretrain_params: {'input_size':[2,128,128],'embedding_size':32,'unet':True,'decoder_depth':1, 'encoder_depth':1, 'cnn':True,'base_lr':0.001,'decoder_channels':[32]}
+    encoder_depth: 1
+    decoder_channels: [32]
+    loss: 'dice'
+  
+datamodule:
+    data_dir: '/home/jupyter/deepslide/data/'
+    dict_dir: '/home/jupyter/deepslide/data/'
+    batch_size: 16
+    num_workers: 8
+    pin_memory: False
+    input_channels: ['vh', 'vv'] #, 'los.rdr_0', 'los.rdr_1', 'topophase.cor_1', 'topophase.flat_imag', 'topophase.flat_real', 'dem']
+    input_transforms: ['Log_transform','Standardize']
+    num_time_steps: 1
+    trainsize: -1
+    setting: 'downstream'
+    datasets: ['hokkaido']
+
+logger:
+  wandb:
+    tags: ["${name}"]
+    project: 'segmentation_task'       

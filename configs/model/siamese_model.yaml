@@ -1,0 +1,4 @@
+_target_: src.models.siamese_module.Siamese_Type_1
+input_size: [2,128,128]
+embedding_size: 32
+base_lr: 0.001

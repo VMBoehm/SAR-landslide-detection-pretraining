@@ -1,0 +1,11 @@
+_target_: src.datamodules.siamese_datamodule.Siamese_Landslide_Datamodule
+
+data_dir: ${data_dir} # data_dir is specified in config.yaml
+dict_dir: ${stats_dir}
+batch_size: 32
+num_workers: 8
+pin_memory: False
+input_channels: ['vh', 'vv'] #, 'los.rdr_0', 'los.rdr_1', 'topophase.cor_1', 'topophase.flat_imag', 'topophase.flat_real', 'dem']
+input_transforms: ['Log_transform','Standardize']
+num_time_steps: 1
+setting: 'pretraining'
