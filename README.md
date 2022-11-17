@@ -24,7 +24,7 @@ Follow these steps to reproduce the experiments from the paper:
 
 3) Analyze results and create figures by running the notebooks in the [notebook folder](https://github.com/VMBoehm/SAR-landslide-detection-pretraining/tree/main/notebooks).
 
-**IMPORTANT:** Before running the experiments, you will need to adapt the filepaths in the configurations files located in '/configs/experiment/'.
+**IMPORTANT:** Before running the experiments, you will need to adapt the filepaths in the configurations files located in [configs/experiment/](https://github.com/VMBoehm/SAR-landslide-detection-pretraining/tree/main/configs/experiment).
 
 ## Notes
 
