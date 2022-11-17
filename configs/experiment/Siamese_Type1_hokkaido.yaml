@@ -38,8 +38,8 @@ model:
   decoder_channels: [32]
   
 datamodule:
-    data_dir: '/home/jupyter/deepslide/data/'
-    dict_dir: '/home/jupyter/deepslide/data/'
+    data_dir: #add path to data here
+    dict_dir: # dictionaries are located in the /data folder
     batch_size: 32
     num_workers: 8
     pin_memory: False
