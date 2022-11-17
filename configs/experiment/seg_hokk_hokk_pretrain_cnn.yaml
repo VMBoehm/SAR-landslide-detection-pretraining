@@ -31,7 +31,7 @@ model:
     input_size: [4,128,128]
     embedding_size: 64
     pre_train_augmented: True
-    pretrain_path: '/home/jupyter/deepslide/logs/experiments/runs/Siamese_Type1_hokkaido/2022-09-27_12-14-28/checkpoints/epoch_269.ckpt'
+    pretrain_path: #add location of pretrained model
     unet: False
     base_lr: 0.001
     pretrain_params: {'input_size':[2,128,128],'embedding_size':32,'unet':True,'decoder_depth':1, 'encoder_depth':1, 'cnn':True,'base_lr':0.001,'decoder_channels':[32]}
@@ -40,8 +40,8 @@ model:
     loss: 'dice'
   
 datamodule:
-    data_dir: '/home/jupyter/deepslide/data/'
-    dict_dir: '/home/jupyter/deepslide/data/'
+    data_dir: #add path to data here
+    dict_dir: # dictionaries are located in the /data folder
     batch_size: 16
     num_workers: 8
     pin_memory: False
