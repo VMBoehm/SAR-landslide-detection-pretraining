@@ -1,5 +1,5 @@
 # SAR-landslide-detection-pretraining
-Repository for the paper "SAR-based landslide classification pretraining leads to better segmentation" 
+Repository for the paper "SAR-based landslide classification pretraining leads to better segmentation" (accepted at the workshop [AI+HADR](https://www.hadr.ai/home) @NeurIPS 2022)
 
 ## Installing the requirements
 To run the experiments presented in the paper make sure to install the requirements.
@@ -16,15 +16,15 @@ Follow these steps to reproduce the experiments from the paper:
 
 1) Train models on the pretext tasks
 
-`bash sar_landslide_pretrain/run_pretext_tasks.sh`
+`bash ./scripts/run_pretext_tasks.sh`
 
 2) Train the downstream tasks
 
-`bash sar_landslide_pretrain/run_segmentation_experiments.sh`
+`bash ./scripts/run_segmentation_experiments.sh`
 
-3) Analyze results and make create figures by running the notebooks in the notebook folder.
+3) Analyze results and create figures by running the notebooks in the [notebook folder](https://github.com/VMBoehm/SAR-landslide-detection-pretraining/tree/main/notebooks).
 
-**IMPORTANT:** Before running the experiments, you will need to adapth the filepaths in the configurations files located in '/configs/experiment/'.
+**IMPORTANT:** Before running the experiments, you will need to adapt the filepaths in the configurations files located in '/configs/experiment/'.
 
 ## Notes
 
