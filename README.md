@@ -1,5 +1,5 @@
 # SAR-landslide-detection-pretraining
-Repository for the paper "SAR-based landslide classification pretraining leads to better segmentation" (accepted at [AI+HADR](https://www.hadr.ai/home) @NeurIPS 2022)
+Repository for the paper [SAR-based landslide classification pretraining leads to better segmentation](https://arxiv.org/abs/2211.09927) (accepted at [AI+HADR](https://www.hadr.ai/home) @NeurIPS 2022)
 
 ## Installing the requirements
 To run the experiments presented in the paper make sure to install the requirements.
