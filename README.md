@@ -32,7 +32,28 @@ The original experiments were run on an NVIDIA V100 GPU in Google Cloud.
 
 ## Citation
 
-If you use this code for your research, please cite our paper (link will be inserted shortly).
+If you use this code for your research, please cite our [paper](https://arxiv.org/abs/2211.09927):
+
+```
+@misc{https://doi.org/10.48550/arxiv.2211.09927,
+  doi = {10.48550/ARXIV.2211.09927},
+  
+  url = {https://arxiv.org/abs/2211.09927},
+  
+  author = {Böhm, Vanessa and Leong, Wei Ji and Mahesh, Ragini Bal and Prapas, Ioannis and Nemni, Edoardo and Kalaitzis, Freddie and Ganju, Siddha and Ramos-Pollan, Raul},
+  
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Image and Video Processing (eess.IV), Signal Processing (eess.SP), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering},
+  
+  title = {SAR-based landslide classification pretraining leads to better segmentation},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+```
 
 
 ## Acknowledgements
